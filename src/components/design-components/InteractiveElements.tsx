@@ -13,7 +13,9 @@ function InteractiveElements() {
 
             <div className="interactive-elements flex space-between" style={{ marginBottom: "15vh" }}>
                 <LargeButton />
-                <div>tabs here</div>
+                <div>
+                    <Navigation />
+                </div>
                 <div>
                     <Sliders numberOfSliders={5} sliderType="primary-slider" />
                 </div>
@@ -27,18 +29,44 @@ function InteractiveElements() {
 }
 
 
+const Navigation: React.FC = () => {
+    return (
+        <div>
+            <nav>
+                <ul className="primary-navigation underline-indicators flex ff-sans-cond uppercase">
+                    <li>
+                        <a className="text-white letter-spacing-1" href="#" tabIndex={0}><span>00</span> Active</a>
+                    </li>
+                    <li>
+                        <a className="text-white letter-spacing-1" href="#" tabIndex={0}><span>01</span> Hovered</a>
+                    </li>
+                    <li>
+                        <a className="text-white letter-spacing-1" href="#" tabIndex={0}><span>02</span> Idle</a>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+    )
+}
+
 
 const Sliders: React.FC<SliderProps> = ({ numberOfSliders, sliderType }) => {
 
     const sliders: JSX.Element[] = Array.from({ length: numberOfSliders },
         (_, index) => index + 1)
-        .map((index) => <div className={`${sliderType}`} > {index}</div >)
+        .map((index) => <div className={`${sliderType}`} tabIndex={0} > {index}</div >)
 
     return (
-        <div className="flow ff-serif fs-500">
+        <div className="flow ff-serif fs-500" style={{ "--flow-space": "1em" } as React.CSSProperties}>
             {sliders}
         </div>
     )
+}
+
+
+
+const onSecondarySliderClicked = (event: React.MouseEvent<HTMLDivElement>) => {
+    const slider = event.currentTarget.setAttribute("data-active", "true")
 }
 
 const LargeButton: React.FC = () => {
