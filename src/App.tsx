@@ -10,7 +10,7 @@ function App() {
       </head>
       <body className='bg-dark text-white'>
 
-        <div>Start of App here</div>
+        <div style={{ outline: "whitesmoke 1px solid" }}>Start of App here</div>
 
         <script src="index.pack.js"></script>
       </body>

@@ -1,11 +1,13 @@
 import './../../index.scss';
 import ColorStyles from './ColorStyles';
+import InteractiveElements from './InteractiveElements';
+import MainButton from './MainButton';
 import TypographyStyles from './TypographyStyles';
 import React from 'react';
 
 function DesignSystem() {
   return (
-    <div className="ff-sans-normal">
+    <div className="ff-sans-normal" >
       <head>
         // google fonts
         <link rel='stylesheet' href="index.css" />
@@ -15,7 +17,7 @@ function DesignSystem() {
           rel="stylesheet" />
         <title>Design System</title>
       </head>
-      <body className='bg-dark text-white'>
+      <body className='bg-dark text-white bg-desktop'>
 
         <div className="container">
           <h1>Design System</h1>
@@ -32,9 +34,11 @@ function DesignSystem() {
             light blue bg with a 20% alpha and white text
           </div>
 
-         
+
           <ColorStyles />
           <TypographyStyles />
+          <InteractiveElements />
+
         </div>
 
         <script src="index.pack.js"></script>

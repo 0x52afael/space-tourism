@@ -142,6 +142,10 @@ select {
   gap: var(--gap, 1rem);
 }
 
+.flow > *:where(:not(:first-child)) {
+  margin-top: var(--flow-space, 1rem);
+}
+
 .two-columns {
 
   grid-template-columns: repeat(2, 1fr); // is 1 fr 50% of the page?
@@ -241,15 +245,13 @@ select {
   font-weight: 700;
 }
 
-.margin-20b {
-  margin-bottom: 1.25rem;
-}
-
-.margin-40b {
-  margin-bottom: 2.5rem;
-}
-
 // color section
+.bg-desktop {
+  background-image: url("../assets/technology/background-technology-desktop.jpg");
+  background-repeat: no-repeat;
+  object-fit: fill;
+  
+}
 .bg-dark {
   background-color: hsl(var(--clr-dark) / 20);
 }
@@ -286,4 +288,71 @@ select {
 }
 
 
+.large-button {
+  position: relative;
+  display: grid;
+  text-decoration: none;
+  z-index: 1;
+  padding: 0 2em;
+  border-radius: 50%;
+  place-items: center;
+  aspect-ratio: 1;
+  
+}
+
+.large-button::after {
+  content: ''; // always required when we have psuedo elements
+  position: absolute;
+  background: hsl(var(--clr-white) / .25);
+  width: 100%;
+  height: 100%;
+  border-radius: inherit;
+  opacity: 20%;
+  z-index: -1;
+}
+
+.large-button:hover::after {
+
+  animation: expand 1.5s ease-out infinite alternate;
+
+  @keyframes expand {
+    to {
+      transform: scale(1.5);
+    }
+    
+  }
+}
+
+
+.primary-slider {
+  content: '';
+  padding: 0 1em;
+  background-color: var(--clr-light);
+  outline: red 1px solid;
+
+}
+
+.secondary-slider {
+  display: grid;
+  place-items: center;
+  background-color: var(--clr-light);
+  outline: var(--clr-white) 1px solid;
+  border-radius: 50%;
+  padding: 0 1em;
+  aspect-ratio: 1;
+  
+  outline: white 1px solid;
+}
+
+
+
+.secondary-slider:hover {
+  background-color: hsl(var(--clr-dark));
+  color: var(--clr-white);
+  
+}
+
+.outline {
+  outline: red 1px solid;
+}
 
