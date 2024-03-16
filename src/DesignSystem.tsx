@@ -37,10 +37,13 @@ function DesignSystem() {
                 style={{ border: "hsl(var(--clr-light)) 1px solid" }} >#FFFFFF</div>
 
             </div>
-            <div className="conatiner flex" style={{
-
+            <div className="conatiner grid" style={{
+              margin: "1em 2em",
+              gridTemplateColumns: "repeat(3, 23%)",
+              gridTemplateRows: "repeat(2, 1fr)",
+              justifyContent: "left"
             }}>
-              <p className="bg-dark" ><span className="text-accent">RGB</span> 11, 13, 23</p>
+              <p className="bg-dark " ><span className="text-accent">RGB</span> 11, 13, 23</p>
               <p className="" ><span className="text-accent">RGB</span> 208, 214, 249</p>
               <p className="" ><span className="text-accent">RGB</span> 255, 255 ,255</p>
 
