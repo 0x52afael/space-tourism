@@ -40,12 +40,14 @@ h1,
 h2,
 h3,
 h4,
+h5,
 p,
 figure,
 blockquote,
 dl,
 dd {
   margin-block-end: 0;
+  margin: 0; 
 }
 
 h1,
@@ -140,12 +142,18 @@ select {
   gap: var(--gap, 1rem);
 }
 
+.two-columns {
+
+  grid-template-columns: repeat(2, 1fr); // is 1 fr 50% of the page?
+
+}
+
 .container {
   padding-inline: 2em;
   margin-inline: auto;
   max-width: 80rem;
 
-  @media screen and (max-width: 1050px) {
+  @media screen and (max-width: 800px) {
     display: block;
     flex-grow: 0;
   }
@@ -218,6 +226,14 @@ select {
 .fs-700,
 .fs-600 {
   line-height: 1.1;
+}
+
+.margin-20b {
+  margin-bottom: 1.25rem;
+}
+
+.margin-40b {
+  margin-bottom: 2.5rem;
 }
 
 // color section
