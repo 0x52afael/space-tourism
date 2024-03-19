@@ -1,13 +1,13 @@
 import './../../index.scss';
 import ColorStyles from './ColorStyles';
 import InteractiveElements from './InteractiveElements';
-import MainButton from './MainButton';
+import MainButton from './LargeButton';
 import TypographyStyles from './TypographyStyles';
 import React from 'react';
 
 function DesignSystem() {
   return (
-    <div className="ff-sans-normal" >
+    <div className="ff-sans-normal" id="design-system" >
       <head>
         // google fonts
         <link rel='stylesheet' href="index.css" />
