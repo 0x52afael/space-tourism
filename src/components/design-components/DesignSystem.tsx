@@ -1,7 +1,7 @@
 import './../../index.scss';
 import ColorStyles from './ColorStyles';
 import InteractiveElements from './InteractiveElements';
-import MainButton from './LargeButton';
+import MainButton from '../LargeButton';
 import TypographyStyles from './TypographyStyles';
 import React from 'react';
 
@@ -30,7 +30,7 @@ function DesignSystem() {
             white bg, with dark text
           </div>
 
-          <div className="example-component bg-light " style={{ padding: "1rem" }}>
+          <div style={{ padding: "1rem", background: "hsl(var(--clr-light) / 0.2)" }}>
             light blue bg with a 20% alpha and white text
           </div>
 

@@ -1,7 +1,7 @@
 import React from "react";
-import LargeButton from "./LargeButton";
-import { Tabs, DotTabs } from "./TabComponents";
-import { Navigation } from "./Navigation";
+import LargeButton from "../LargeButton";
+import { Tabs, DotTabs } from "../TabComponents";
+import Navigation from "../Navigation";
 
 interface SliderProps {
     numberOfSliders: number;
@@ -13,7 +13,7 @@ function InteractiveElements() {
             <h2 className="numbered-title"><span>03 </span>Interactive Elements</h2>
             <div className="nav-bar"></div>
             <div >
-                <Navigation />
+                <Navigation content={["00 active", "01 hovered", "02 idle"]} hrefs={["#", "#interactive-elements", "#interactive-elements"]} />
             </div>
             <div className="interactive-elements flex space-between mx-5 mb-10" >
                 <div className="">
