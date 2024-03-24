@@ -372,12 +372,21 @@ select {
   outline: red 1px solid;
 }
 
+nav {
+}
+
 .primary-navigation {
   --gap: 6rem;
   --underline-gap: 2rem;
   list-style: none;
   padding: 0;
   margin: 0;
+  //min-width: 60%;
+  width: 75vh;
+
+  outline: red 1px solid;
+  backdrop-filter: blur(30px);
+  background-color: transparent;
 }
 
 .primary-navigation a {
@@ -396,6 +405,7 @@ select {
 
 .underline-indicators > * {
   cursor: pointer;
+  background-color: transparent;
   padding: var(--underline-gap, 1rem) 0;
   border: 0;
   border-bottom: 0.2rem solid hsl(var(--clr-white) / 0);
@@ -430,13 +440,39 @@ select {
   background-color: hsl(var(--clr-white) / 1);
 }
 
+.navigation-line {
+  outline: hsl(var(--clr-white) / 0.25) 1px solid;
+  border-radius: 2em;
+  width: 40vh;
+  top: 50%;
+  left: 12%;
+  z-index: 1;
+  position: absolute;
+}
+
+.nav-container {
+  justify-content: end;
+  flex-direction: row;
+  position: relative;
+}
+
+.logo {
+  background-image: url("../assets/shared/logo.svg");
+  width: 10vh;
+  height: 10vh;
+  background-repeat: no-repeat;
+  position: absolute;
+  left: 5%;
+  top: 25%;
+}
+
 #interactive-elements {
   background-image: url("../assets/home/background-home-desktop.jpg");
   background-size: contain;
   background-repeat: no-repeat;
-  max-height: 100vh;
-  max-width: 100vh;
-
-  height: 100vh;
-  width: 100vh;
+  background-position-x: 0%;
+  background-position-y: 20%;
+  //  background-attachment: fixed;
+  min-height: 100vh;
+  min-width: 100vh;
 }

@@ -12,7 +12,7 @@ function InteractiveElements() {
         <section id="interactive-elements" className="flow" style={{ "--flow-space": "5rem" } as React.CSSProperties}>
             <h2 className="numbered-title"><span>03 </span>Interactive Elements</h2>
             <div className="nav-bar"></div>
-            <div className="flex w-full flex-center" >
+            <div >
                 <Navigation />
             </div>
             <div className="interactive-elements flex space-between mx-5 mb-10" >
