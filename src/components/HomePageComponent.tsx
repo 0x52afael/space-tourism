@@ -4,7 +4,7 @@ type Props = {}
 
 function HomePageComponent(props: Props) {
     return (
-        <div className='mt-5'>
+        <div className='text-white'>
             00 Home
             01 Destination
             02 Crew

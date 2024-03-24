@@ -1,23 +1,20 @@
 import React from 'react';
-import logo from './logo.svg';
 import './App.css';
+import { BrowserRouter as Router, Route, Link, Routes } from 'react-router-dom';
 import HomePageComponent from './components/HomePageComponent';
+import DesignSystem from './components/design-components/DesignSystem';
 
 function App() {
   return (
-    <div className="App ff-sans-normal">
-      <head>
-        <link rel="stylesheet" href="index.css" />
-      </head>
-      <body className='bg-dark text-white'>
+    <Router>
 
-        <div style={{ outline: "whitesmoke 1px solid" }}>Start of App here
-          <HomePageComponent />
-        </div>
+      <Routes>
+        <Route path='/' Component={HomePageComponent} />
+        <Route path='/styling' Component={DesignSystem} />
+      </Routes>
 
-        <script src="index.pack.js"></script>
-      </body>
-    </div>
+      <script src="index.pack.js"></script>
+    </Router >
   );
 }
 

@@ -372,19 +372,14 @@ select {
   outline: red 1px solid;
 }
 
-nav {
-}
-
 .primary-navigation {
   --gap: 6rem;
   --underline-gap: 2rem;
   list-style: none;
   padding: 0;
   margin: 0;
-  //min-width: 60%;
   width: 75vh;
 
-  outline: red 1px solid;
   backdrop-filter: blur(30px);
   background-color: transparent;
 }
@@ -472,7 +467,6 @@ nav {
   background-repeat: no-repeat;
   background-position-x: 0%;
   background-position-y: 20%;
-  //  background-attachment: fixed;
   min-height: 100vh;
   min-width: 100vh;
 }
