@@ -19,7 +19,7 @@ function DesignSystem() {
       </head>
       <body className='bg-dark text-white bg-desktop'>
 
-        <div className="container">
+        <div className="container mb-10">
           <h1>Design System</h1>
 
           <div className="bg-light text-dark" style={{ padding: "1rem" }}>

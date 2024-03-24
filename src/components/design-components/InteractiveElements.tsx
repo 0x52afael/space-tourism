@@ -26,7 +26,7 @@ function InteractiveElements() {
                     <p className="text-accent letter-spacing-2 mb-10 text-center" style={{ marginTop: "2rem" }}>Tabs (Active, Hover, & Idle)</p>
                     <DotTabs />
                     <p className="text-accent letter-spacing-2 text-center mb-10" style={{ marginTop: "2rem" }}>Slider 1 States (Active, Hover, & Idle)</p>
-                    <Sliders numberOfSliders={5} />
+                    <Sliders numberOfSliders={3} />
                     <p className="text-accent letter-spacing-2 text-center mt-5">Slider 2 States (Active, Hover, & Idle)</p>
                 </div>
             </div>

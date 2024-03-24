@@ -430,7 +430,13 @@ select {
   background-color: hsl(var(--clr-white) / 1);
 }
 
-#design-system {
-  background-image: url("../assets/home/background-home-mobile.jpg");
-  background-repeat: none;
+#interactive-elements {
+  background-image: url("../assets/home/background-home-desktop.jpg");
+  background-size: contain;
+  background-repeat: no-repeat;
+  max-height: 100vh;
+  max-width: 100vh;
+
+  height: 100vh;
+  width: 100vh;
 }
