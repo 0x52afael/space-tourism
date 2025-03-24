@@ -43,5 +43,12 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
+  },
+  "nvim": {
+    "pde": {
+      "styles": [
+        "http://localhost:3000/styles.css"
+      ]
+    }
   }
 }
