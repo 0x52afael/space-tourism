@@ -207,16 +207,11 @@ select {
   justify-content: center;
 }
 
-.screen-size-70 {
-  height: 80%;
-  width: 100%;
-}
-
 .grid-center {
   object-position: center;
 }
 
-.grid-container > * {
+.grid-container * {
   max-width: 50ch;
 }
 
@@ -224,28 +219,42 @@ select {
   display: grid;
   text-align: center;
   place-items: center;
-  row-gap: 20%;
+  row-gap: 2rem;
   padding-inline: 1rem;
-   outline: 1px solid green;
+  width: 100vh;  /* or desired width */
+  height: 100vh;
   
+   
+}
+
+@media (min-width: 45rem) {
+    
+}
+@media (min-width: 25rem) {
+     
 }
 
 
-@media (min-width: 20rem) {
-  .grid-container {
-    column-gap: var(--container-gap, 0.5rem);
+@media (min-width: 35rem) {
+  .navigation-line {
+    outline: hsl(var(--clr-white) / 0.25) 1px solid;
+    border-radius: 2em;
+    width: 45%;
+    top: 50%;
+    left: 12%;
+    z-index: 1;
+    position: absolute;
   }
 }
+
 
 @media (min-width: 45rem) {
   .grid-container { 
     text-align: left;
     column-gap: var(--container-gap, 2rem);
+
+    grid-template-columns: minmax(2rem, 0.3fr) repeat(2, minmax(30rem, 1fr)) minmax(2rem, 0.3fr);
     
-    grid-template-columns:
-    minmax(2rem, 1fr)
-    repeat(2, minmax(0, 30rem))
-    minmax(2rem, 1fr);
   }
 
   .grid-container > *:first-child {
@@ -330,8 +339,7 @@ select {
 }
 
 .fs-700 {
-  font-size: var(--fs-700);
-}
+  font-size: var(--fs-700); }
 
 .fs-600 {
   font-size: var(--fs-600);
@@ -463,14 +471,34 @@ select {
   outline: red 1px solid;
 }
 
+@media (min-width: 25rem) {
+  .primary-navigation {
+    --gap: 6rem;
+    --underline-gap: 2rem;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    width: 60vw;
+    display: block;
+    backdrop-filter: blur(30px);
+    background-color: transparent;
+  } 
+}
+
+@media (min-width: 35rem) {
+  .primary-navigation {
+    display: flex;
+  }
+}
+
 .primary-navigation {
   --gap: 6rem;
   --underline-gap: 2rem;
   list-style: none;
   padding: 0;
   margin: 0;
-  width: 60vw;
-
+  width: 50vw;
+  display: block;
   backdrop-filter: blur(30px);
   background-color: transparent;
 }
@@ -484,10 +512,30 @@ select {
   margin-right: 0.5em;
 }
 
+@media (min-width: 35rem) {
+  .mobile-nav-toggle:where([aria-expanded="false"]) {
+    display: none;
+
+  }
+}
+
+@media (min-width: 45rem) {
+  .mobile-nav-toggle {
+    display: none;
+  }
+}
+
 .tab-list {
   --underline-gap: 0.25rem;
   --gap: 2.5rem;
 }
+
+
+.bg-transparent {
+  background-color: transparent;
+  border: none;
+  outline: none;
+} 
 
 .underline-indicators > * {
   cursor: pointer;
@@ -526,15 +574,6 @@ select {
   background-color: hsl(var(--clr-white) / 1);
 }
 
-.navigation-line {
-  outline: hsl(var(--clr-white) / 0.25) 1px solid;
-  border-radius: 2em;
-  width: 45%;
-  top: 50%;
-  left: 12%;
-  z-index: 1;
-  position: absolute;
-}
 
 .nav-container {
   justify-content: end;
@@ -546,6 +585,10 @@ select {
   flex-direction: row;
 }
 
+.f-grow {
+  flex-grow: 1;
+}
+
 .logo {
   background-image: url("../assets/shared/logo.svg");
   width: 10vh;
@@ -553,7 +596,24 @@ select {
   background-repeat: no-repeat;
   position: absolute;
   left: 5%;
-  top: 25%;
+  top: 8%;
+}
+
+.hamburger:hover {
+  transform: scale(1.05);
+
+}
+
+.hamburger {
+  background-image: url("../assets/shared/icon-hamburger.svg");
+  width: 10vh;
+  height: 10vh;
+  background-repeat: no-repeat;
+  position: absolute;
+  right: 15%;
+  top: 8%;
+  z-index: 1;
+  transition: transform 0.2s ease-in;
 }
 
 #interactive-elements {
@@ -566,9 +626,35 @@ select {
   min-width: 100vh;
 }
 
-#home-page {
-  background-image: url("../assets/home/background-home-desktop.jpg");
-  background-size: cover;
-  background-repeat: no-repeat;
-  height: 100vh;
+
+
+// Home / page specific
+
+
+.home {
+
+    background-image: url("../assets/home/background-home-mobile.jpg");
+
 }
+
+body {
+  background-size: cover;
+  background-position: bottom center;
+}
+
+
+@media (min-width: 35rem) {
+  .home {
+    background-position: center center;
+    background-image: url("../assets/home/background-home-tablet.jpg");
+  } 
+}
+
+@media (min-width: 45rem) {
+  .home {
+    background-image: url("../assets/home/background-home-desktop.jpg")
+  } 
+}
+
+
+
